@@ -23,7 +23,6 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
             print(f"Error: {e}")
             error_response = f"-ERR {str(e)}\r\n"
             self.request.sendall(error_response.encode('utf-8'))
-
         
 if __name__ == "__main__":  
     HOST, PORT = "localhost", 9999
