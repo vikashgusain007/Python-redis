@@ -10,7 +10,6 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
             all_values = all_values.decode('utf-8')
             all_values = all_values.split(' ')        
             formated_val = all_values[0].replace('\r\n', ' ')
-            print(formated_val,'formated_val-----------------formated_val')
             obj = process_data(formated_val)
             print(obj)
             if obj:
